@@ -1,0 +1,77 @@
+<html>
+  <head>
+     <script src="https://unpkg.com/deck.gl@^8.1.0/dist.min.js"></script>
+     <script src="https://d3js.org/d3.v5.min.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="./reset.css" />
+
+     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="./style.css" />
+     <script type="text/javascript" src="./allData.json"></script>
+  </head>
+
+  <body>
+       <h1 id="title" class="p-2 justify-content-center">
+            Uber Pickups Visualization
+       </h1>
+       <div class="d-flex flew-row flex-wrap justify-content-center">
+            <div class="col-sm-12 col-lg-6"> 
+               <h4 id="mapTitle">All Uber Pickups</h4>
+
+               <div id="map" class=""></div>
+   
+               <div id="monthMenu" class="d-flex flex-row align-items-center justify-content-center mt-2">
+                    <button id="showMonthData" type="button" class="btn btn-primary m-1 col-2">Month</button>
+                    <div class="slidercontainer p-2 col-6">
+                         <input type="range" min="0" max="11" value="0" class="slider" id="monthSlider">
+                    </div>
+                    <p id="currentMonth" class="m-1 col-2">January</p>
+               </div>
+
+               <div id="dayMenu" class=" d-flex flex-row align-items-center justify-content-center">
+                    <button id="showDayData" type="button" class="btn btn-primary m-1 col-2">Day of Week</button>
+                    <div class="slidercontainer p-2 col-6">
+                         <input type="range" min="0" max="6" value="0" class="slider" id="daySlider">
+                    </div>
+                    <p id="currentDay" class="m-1 col-2">Sunday</p>
+               </div>
+
+               <div id="hourMenu" class="d-flex flex-row align-items-center justify-content-center">
+                    <button id="showHourData" type="button" class="btn btn-primary m-1 col-2">Hour of Day</button>
+                    <div class="slidercontainer p-2 col-6">
+                         <input type="range" min="0" max="23" value="0" class="slider" id="hourSlider">
+                    </div>
+                    <p id="currentHour" class="m-1 col-2">12 am</p>
+               </div>
+               
+               <div class="d-flex flex-row align-items-center justify-content-center">
+                    <!-- <div class="col-2"></div> -->
+                    <button id="showAllData" type="button" class="btn btn-success m-1 col-3">All Data</button>
+                    <button id="toggleAnimation" type="button" class="btn btn-primary m-1 col-3">Toggle Animation</button>
+                    <button id="toggleMarker" type="button" class="btn btn-primary m-1 col-3">Toggle Marker</button>
+                    <!-- <div class="col-2"></div> -->
+               </div>
+            </div>
+          
+            <div class="col-sm-12 col-lg-6">
+               <div id="graph1" class=""></div>
+               <div id="graph2" class=""></div>
+               <div id="graph3" class=""></div>
+            </div>
+       </div>
+
+       <div id="tooltip" class="hidden">
+            <p></p>
+       </div>
+  </body>
+
+  <script type="text/javascript" src="./index.js">
+  </script>
+</html>

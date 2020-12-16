@@ -1,0 +1,109 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+#title {
+  text-align: center;
+}
+
+#mapTitle {
+  text-align: center;
+}
+
+#map {
+  height: 67.5vh;
+  /* width: 50vw; */
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  /* display: flex; */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f6f3;
+}
+
+.slidercontainer {
+  /* width: 35vh; Width of the outside container */
+  justify-content: center;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /*Override default CSS styles*/
+
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+#tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+}
+
+/* .btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #156f90 !important;
+} */
+
+.bar-text {
+  pointer-events: none;
+}
