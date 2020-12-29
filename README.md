@@ -1,5 +1,6 @@
 # 189L-Final: Uber Data Visualization
 
-[Website Link](https://finalproject-298600.wl.r.appspot.com)
+Uber Data Visualization that implements a simple Node.js backend and Vanilla Javascript frontend with D3.js and MapboxGL (additional details in website folder)
 
-website: Website that implements a simple Node.js backend and Vanilla Javascript frontend with D3.js and MapboxGL (additional details in folder)
+[Website Link](https://finalproject-298600.wl.r.appspot.com)
+![Image of Visualization](https://github.com/ryanlazz16/189L-Final/blob/main/images/view.png)
